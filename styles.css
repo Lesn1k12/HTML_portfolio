@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    /*=== main ===*/
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #fff;
+    --main-color: #8fb3dc;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+
+    --scroll: 0;
+}
+
+.dark-mode-variables{
+    /* темна тема */
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+html{
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+::selection{
+    color: var(--color-primary);
+    background-color: var(--color-background);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--main-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    height: 100px;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-dark);
+}
+
+p {
+    color: var(--color-dark);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* .img-fluid {
+    max-width: 100%;
+    height: auto;
+}  */
+/* .container {
+    padding: 0 50px;
+    margin: auto;
+    overflow: hidden;
+} */
+
+input {
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-primary);
+}
+
+textarea {
+    box-shadow: var(--box-shadow);
+}
+
+header {
+    box-shadow: var(--box-shadow);
+}
+
+
+.row {
+    display: flex;
+}
+
+.btn {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 10px 15px;
+    color: var(--color-dark);
+    font-size: 16px;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+/* =================== header =================*/
+
+.logo {
+    width: 150px;
+    height: auto;
+    display: flex;
+}
+
+
+.navbar {
+    white-space: nowrap;
+    transition: .5s;
+    background-color: var(--color-white);
+}
+
+.menu-outline {
+    color: var(--color-dark);
+    width: 50px;
+    height: 50px;
+}
+
+.close-outline {
+    font-size: 25px;
+    position: absolute;
+    top: 3%;
+    right: 15px;
+    color: var(--color-dark);
+    cursor: pointer;
+    background: none;
+}
+
+
+.navbar-brand {
+    color: var(--color-dark);
+}
+
+.navbar-item {
+    display: inline-block;
+}
+
+
+.nav-link {
+    padding: 5px 10px;
+    position: relative;
+    transition: .4s;
+    color: var(--color-dark);
+    font-weight: 500;
+}
+
+.nav-item a {
+    border-radius: 2px;
+}
+
+.nav-item a:hover{
+    color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    transform: translateY(.25rem);
+}
+
+.nav-link a:hover {
+    color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    transform: translateY(.25rem);
+} 
+
+.offcanvas {
+    background-color: var(--color-background);
+}
+
+.close {
+    color: var(--color-dark);
+    background-color: none;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    color: #1B9C85 !important; 
+}
+
+
+/*============= under header =============*/
+.under_header {
+    padding-top: 114px;
+    position: relative;
+    display: block;
+}
+
+/* .under_header_content {
+    text-align: center;
+} */
+
+.under_header_content h4 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.under_header_content h1 {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.under_header_content p {
+    margin: 10px 0 40px;
+    color: var(--color-dark);
+    font-size: 20px;
+}
+
+.under_header_content .btn {
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.under_header_social a {
+    font-size: 22px;
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-info-dark);
+    color: var(--color-dark);
+    transition: .3s;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+}
+
+.under_header_social a:hover {
+    color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    transform: translateY(-.25rem);
+}
+
+.under_header_img img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    transition: 0,5s;
+}
+
+.navbar-toggler {
+    color: var(--color-dark);
+}
+
+
+
+/*============= about =============*/
+.about {
+    background-color: var(--color-background);
+}
+
+.card {
+    box-shadow: var(--box-shadow);
+    border: none;
+    background-color: var(--color-white);
+    margin-top: 20px;
+}
+
+
+
+
+
+.card-text, .card-title {
+    color: var(--color-dark);
+}
+
+/*============= progress =============*/
+
+.progress {
+    height: 10px;
+}
+
+/* .progress-bar {
+    width: 25%;
+} */
+
+.skills {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.skill-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-dark-variant);
+    margin: 20px 0;
+}
+
+.skill-bar {
+    height: 14px;
+    background-color: var(--main-color);
+    border-radius: 3px;
+}
+
+.skill-per {
+    height: 14px;
+    background: var(--color-primary);
+    color: var(--color-dark);
+    border-radius: 3px;
+    position: relative;
+    /* animation: fillBars 2.5s 1; */
+
+}
+
+ .skill-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: var(--main-color);
+    border-radius: 12px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+    z-index: 1000;
+}
+
+ .skill-per::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--main-color);
+    top: -18px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+    z-index: 999;
+}
+
+.animate-end {
+    animation: fillBars 2.5s 1;
+}
+
+
+
+@keyframes fillBars {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+/* dark mode */
+
+.dark-mode{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+.dark-mode span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode span.active{
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+
+/* scroll animation */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/* timeline */
+
+.timeline {
+    position: relative;
+}
+
+.timelime-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.timeline::before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 7px; 
+    top: 0;
+    background-color: var(--color-primary);
+}
+
+
+.circle-dot {
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-primary); 
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 12%;
+    transform: translateY(-50%);
+}
+
+.timeline-date {
+    margin-left: 20px; 
+}
+
+.timelime-item:not(:last-child)::after {
+    content: '';
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 7px; /* або будь-яке інше значення, яке вам подобається */
+    top: 0;
+    background-color: var(--color-primary);
+}
+
+/* portfolio icon */
+
+.icon {
+    font-size: 2rem;
+    color: var(--color-dark);
+}
